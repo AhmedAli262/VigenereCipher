@@ -43,6 +43,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableMessageUnknownKey = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputBlankSpace = new System.Windows.Forms.NumericUpDown();
             this.inputKeyLength = new System.Windows.Forms.NumericUpDown();
             this.constantLength = new System.Windows.Forms.CheckBox();
             this.btnDecryptUnknownKey = new System.Windows.Forms.Button();
@@ -65,22 +69,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.inputSecretMessage = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.inputBlankSpace = new System.Windows.Forms.NumericUpDown();
-            this.tableMessageUnknownKey = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMessageUnknownKey)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputKeyLength)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableMessageKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpaces)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableMessageUnknownKey)).BeginInit();
             this.SuspendLayout();
             // 
             // inputMessage
@@ -89,7 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMessage.Location = new System.Drawing.Point(6, 35);
             this.inputMessage.Name = "inputMessage";
-            this.inputMessage.Size = new System.Drawing.Size(671, 20);
+            this.inputMessage.Size = new System.Drawing.Size(619, 20);
             this.inputMessage.TabIndex = 0;
             // 
             // inputKey
@@ -98,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputKey.Location = new System.Drawing.Point(6, 93);
             this.inputKey.Name = "inputKey";
-            this.inputKey.Size = new System.Drawing.Size(671, 20);
+            this.inputKey.Size = new System.Drawing.Size(619, 20);
             this.inputKey.TabIndex = 1;
             // 
             // buttonEncrypt
@@ -117,7 +117,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.outputEncryptedMessage.Location = new System.Drawing.Point(6, 182);
             this.outputEncryptedMessage.Name = "outputEncryptedMessage";
-            this.outputEncryptedMessage.Size = new System.Drawing.Size(671, 20);
+            this.outputEncryptedMessage.Size = new System.Drawing.Size(619, 20);
             this.outputEncryptedMessage.TabIndex = 3;
             // 
             // label2
@@ -144,7 +144,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(707, 16);
+            this.button1.Location = new System.Drawing.Point(655, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 7;
@@ -187,7 +187,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(747, 498);
+            this.groupBox1.Size = new System.Drawing.Size(695, 498);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Encrypt or decrypt";
@@ -212,7 +212,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(694, 617);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Encrypt or decrypt";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -223,7 +223,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(694, 617);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Decrypt unknown key";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -247,7 +247,42 @@
             this.groupBox2.Size = new System.Drawing.Size(688, 611);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Decode unknown key";
+            this.groupBox2.Text = "Decrypt unknown key";
+            // 
+            // tableMessageUnknownKey
+            // 
+            this.tableMessageUnknownKey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableMessageUnknownKey.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableMessageUnknownKey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableMessageUnknownKey.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.tableMessageUnknownKey.Location = new System.Drawing.Point(6, 279);
+            this.tableMessageUnknownKey.Name = "tableMessageUnknownKey";
+            this.tableMessageUnknownKey.Size = new System.Drawing.Size(676, 335);
+            this.tableMessageUnknownKey.TabIndex = 28;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Decrypted message";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Key";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // inputBlankSpace
+            // 
+            this.inputBlankSpace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputBlankSpace.Location = new System.Drawing.Point(9, 145);
+            this.inputBlankSpace.Name = "inputBlankSpace";
+            this.inputBlankSpace.Size = new System.Drawing.Size(664, 20);
+            this.inputBlankSpace.TabIndex = 27;
             // 
             // inputKeyLength
             // 
@@ -340,7 +375,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(694, 617);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Decrypt using dictionary";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -362,7 +397,7 @@
             this.groupBox3.Size = new System.Drawing.Size(691, 614);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Decode with dictionary";
+            this.groupBox3.Text = "Decrypt using dictionary";
             // 
             // tableMessageKey
             // 
@@ -463,41 +498,6 @@
             this.label15.TabIndex = 13;
             this.label15.Text = "Secret message";
             // 
-            // inputBlankSpace
-            // 
-            this.inputBlankSpace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputBlankSpace.Location = new System.Drawing.Point(9, 145);
-            this.inputBlankSpace.Name = "inputBlankSpace";
-            this.inputBlankSpace.Size = new System.Drawing.Size(664, 20);
-            this.inputBlankSpace.TabIndex = 27;
-            // 
-            // tableMessageUnknownKey
-            // 
-            this.tableMessageUnknownKey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableMessageUnknownKey.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableMessageUnknownKey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableMessageUnknownKey.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.tableMessageUnknownKey.Location = new System.Drawing.Point(6, 279);
-            this.tableMessageUnknownKey.Name = "tableMessageUnknownKey";
-            this.tableMessageUnknownKey.Size = new System.Drawing.Size(676, 335);
-            this.tableMessageUnknownKey.TabIndex = 28;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 200F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Decrypted message";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Key";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,14 +514,14 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMessageUnknownKey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputKeyLength)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableMessageKey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpaces)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputBlankSpace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableMessageUnknownKey)).EndInit();
             this.ResumeLayout(false);
 
         }
